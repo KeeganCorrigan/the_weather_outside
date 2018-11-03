@@ -1,0 +1,252 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="App"
+>
+  <div
+    className="NavBar-root-120"
+  >
+    <header
+      className="MuiPaper-root-132 MuiPaper-elevation4-138 MuiAppBar-root-123 MuiAppBar-positionStatic-127 MuiAppBar-colorPrimary-130"
+    >
+      <div
+        className="MuiToolbar-root-159 blue-toolbar MuiToolbar-regular-161 MuiToolbar-gutters-160"
+      >
+        <i
+          className="fas fa-cloud-sun-rain"
+        />
+          
+        <b>
+          THE WEATHER OUTSIDE
+        </b>
+      </div>
+    </header>
+  </div>
+  <div>
+    <div
+      style={
+        Object {
+          "backgroundColor": "#fff",
+          "paddingTop": "calc(1 / 1 * 100%)",
+          "position": "relative",
+        }
+      }
+    >
+      
+      <div
+        style={
+          Object {
+            "alignItems": "center",
+            "display": "flex",
+            "height": "100%",
+            "justifyContent": "center",
+            "left": 0,
+            "position": "absolute",
+            "top": 0,
+            "width": "100%",
+          }
+        }
+      >
+        <div
+          className="MuiCircularProgress-root-163 MuiCircularProgress-colorPrimary-166 MuiCircularProgress-indeterminate-165"
+          role="progressbar"
+          style={
+            Object {
+              "height": 48,
+              "width": 48,
+            }
+          }
+        >
+          <svg
+            className="MuiCircularProgress-svg-168"
+            viewBox="22 22 44 44"
+          >
+            <circle
+              className="MuiCircularProgress-circle-169 MuiCircularProgress-circleIndeterminate-171"
+              cx={44}
+              cy={44}
+              fill="none"
+              r={20.2}
+              strokeWidth={3.6}
+              style={Object {}}
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="MuiPaper-root-132 MuiPaper-elevation1-135 MuiPaper-rounded-133 MuiCard-root-176 SimpleCard-card-172"
+  >
+    <div
+      className="MuiCardContent-root-177"
+    >
+      <p
+        className="MuiTypography-root-178 MuiTypography-body1-187 MuiTypography-colorTextSecondary-211 MuiTypography-gutterBottom-205 SimpleCard-title-174"
+      >
+        Temperature
+      </p>
+      <h2
+        className="MuiTypography-root-178 MuiTypography-h5-194"
+      >
+        0
+        <span
+          className="SimpleCard-bullet-173"
+        >
+          •
+        </span>
+        F
+      </h2>
+      <p
+        className="MuiTypography-root-178 MuiTypography-body1-187 MuiTypography-colorTextSecondary-211 SimpleCard-pos-175"
+      >
+        Summary
+      </p>
+      <p
+        className="MuiTypography-root-178 MuiTypography-body1-187"
+      >
+        <i>
+          
+        </i>
+      </p>
+    </div>
+  </div>
+  <div
+    className="MuiBottomNavigation-root-214 SimpleBottomNavigation-root-213"
+  >
+    <button
+      className="MuiButtonBase-root-220 MuiBottomNavigationAction-root-215 MuiBottomNavigationAction-selected-216"
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseLeave={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      tabIndex="0"
+      type="button"
+    >
+      <span
+        className="MuiBottomNavigationAction-wrapper-218"
+      >
+        <svg
+          aria-hidden="true"
+          className="MuiSvgIcon-root-223"
+          focusable="false"
+          role="presentation"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"
+          />
+          <path
+            d="M0 0h24v24H0z"
+            fill="none"
+          />
+        </svg>
+        <span
+          className="MuiBottomNavigationAction-label-219 MuiBottomNavigationAction-selected-216"
+        >
+          Home
+        </span>
+      </span>
+      <span
+        className="MuiTouchRipple-root-232"
+      />
+    </button>
+    <button
+      className="MuiButtonBase-root-220 MuiBottomNavigationAction-root-215"
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseLeave={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      tabIndex="0"
+      type="button"
+    >
+      <span
+        className="MuiBottomNavigationAction-wrapper-218"
+      >
+        <svg
+          aria-hidden="true"
+          className="MuiSvgIcon-root-223"
+          focusable="false"
+          role="presentation"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M0 0h24v24H0z"
+            fill="none"
+          />
+          <path
+            d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96z"
+          />
+        </svg>
+        <span
+          className="MuiBottomNavigationAction-label-219"
+        >
+          Darksky
+        </span>
+      </span>
+      <span
+        className="MuiTouchRipple-root-232"
+      />
+    </button>
+    <button
+      className="MuiButtonBase-root-220 MuiBottomNavigationAction-root-215"
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseLeave={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      tabIndex="0"
+      type="button"
+    >
+      <span
+        className="MuiBottomNavigationAction-wrapper-218"
+      >
+        <svg
+          aria-hidden="true"
+          className="MuiSvgIcon-root-223"
+          focusable="false"
+          role="presentation"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M0 0h24v24H0z"
+            fill="none"
+          />
+          <path
+            d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"
+          />
+        </svg>
+        <span
+          className="MuiBottomNavigationAction-label-219"
+        >
+          About
+        </span>
+      </span>
+      <span
+        className="MuiTouchRipple-root-232"
+      />
+    </button>
+  </div>
+</div>
+`;

@@ -2,20 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import NavBar from './navbar';
-
-var options = {
-  enableHighAccuracy: false,
-  timeout: 2000,
-  maximumAge: 0
-};
-
-const success = (pos) => {
-  this.setState({ latitude: pos.coords.latitude, longitude: pos.coords.longitude });
-}
-
-const error = (err) => {
-  console.log("error", err)
-}
+import Gif from './gif';
 
 class App extends Component {
   constructor(props) {
@@ -24,7 +11,17 @@ class App extends Component {
   }
 
   componentDidMount() {
-    navigator.geolocation.getCurrentPosition(success, error, options);
+    const options = {
+      enableHighAccuracy: false,
+      timeout: 60000,
+      maximumAge: Infinity
+    };
+
+    navigator.geolocation.getCurrentPosition(
+      (pos) => { this.setState({ latitude: pos.coords.latitude, longitude: pos.coords.longitude }) },
+      (err) => { console.log("error", err) },
+      options
+    );
   }
 
   render() {
@@ -33,6 +30,7 @@ class App extends Component {
     return (
       <div className="App">
         < NavBar />
+        < Gif latitude={this.state.latitude} longitude={this.state.longitude} />
       </div>
     );
   }

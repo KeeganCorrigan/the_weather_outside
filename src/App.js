@@ -54,7 +54,6 @@ class App extends Component {
     return (
       < SimpleCard summary={this.state.summary} temperature={this.state.apparentTemperature} />
     )
-
   }
 
   render() {

@@ -17,14 +17,20 @@ code {
   color: white;
 }
 
-.red-toolbar {
-  background-color: #f44336;
+.red-toolbar, .blue-toolbar {
   display: flex;
   justify-content: center;
 }
 
+.red-toolbar {
+  background-color: #f44336;
+}
+
 .blue-toolbar {
   background-color: #2196f3;
-  display: flex;
-  justify-content: center;
+}
+
+.fa-cloud-sun-rain {
+  font-size: 22px;
+  margin-right: 5px;
 }

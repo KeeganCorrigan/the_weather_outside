@@ -2,10 +2,6 @@ import React, { Component } from 'react';
 import Image from 'material-ui-image'
 
 class Gif extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     return (
       <div>

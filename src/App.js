@@ -8,8 +8,20 @@ import { fetchWeatherData } from './controllers/weatherController'
 class App extends Component {
   constructor(props) {
     super(props);
+    this.success = this.success.bind(this);
     this.state = {imageUrl: ""};
   }
+
+  success(pos) {
+    fetchWeatherData(pos.coords.latitude, pos.coords.longitude)
+      .then((weatherData) => {
+        this.setState({ imageUrl: weatherData.data.image_url});
+      });
+  };
+
+  error(err) {
+    console.log("error", err);
+  };
 
   componentDidMount() {
     const options = {
@@ -18,20 +30,14 @@ class App extends Component {
       maximumAge: Infinity
     };
 
-    fetchWeatherData(39.7169604, -105.0443296).then((weatherData) => {
-      { this.setState({ imageUrl: weatherData.data.image_url})
-      };
-    })
-
     navigator.geolocation.getCurrentPosition(
-      (pos) => { this.setState({ latitude: pos.coords.latitude, longitude: pos.coords.longitude }) },
-      (err) => { console.log("error", err) },
+      this.success,
+      this.error,
       options
     );
   }
 
   render() {
-    console.log("image url", this.state.imageUrl)
     return (
       <div className="App">
         < NavBar />

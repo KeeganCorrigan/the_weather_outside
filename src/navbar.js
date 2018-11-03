@@ -10,6 +10,7 @@ import SimpleMenu from './simpleMenu';
 const styles = {
   root: {
     flexGrow: 1,
+    backgroundColor: 'black',
   },
   flex: {
     flex: 1,
@@ -25,7 +26,7 @@ function NavBar(props) {
   return (
     <div className={classes.root}>
       <AppBar position="static">
-        <Toolbar>
+        <Toolbar classes={{root: "tool-bar"}}>
           <SimpleMenu />
           <Typography variant="title" color="inherit" className={classes.flex}>
             The Weather Outside

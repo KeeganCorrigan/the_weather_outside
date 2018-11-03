@@ -5,10 +5,12 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import SimpleMenu from './simpleMenu';
+import SatelliteIcon from '@material-ui/icons/SatelliteOutlined';
 
 const styles = {
   root: {
     flexGrow: 1,
+    fontFamily: 'Lato, sans-serif',
   },
   flex: {
     flex: 1,
@@ -26,9 +28,7 @@ function NavBar(props) {
     <div className={classes.root}>
       <AppBar position="static">
         <Toolbar classes={{root: background}}>
-          <Typography variant="subheading" color="inherit" className={classes.flex}>
-            <b>THE WEATHER OUTSIDE</b>
-          </Typography>
+            {<SatelliteIcon />}<b>THE WEATHER OUTSIDE</b>
         </Toolbar>
       </AppBar>
     </div>

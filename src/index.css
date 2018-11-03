@@ -19,8 +19,12 @@ code {
 
 .red-toolbar {
   background-color: #f44336;
+  display: flex;
+  justify-content: center;
 }
 
 .blue-toolbar {
   background-color: #2196f3;
+  display: flex;
+  justify-content: center;
 }

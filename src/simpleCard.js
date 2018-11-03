@@ -23,9 +23,6 @@ const styles = {
 };
 
 function SimpleCard(props) {
-  console.log("in card", props.summary)
-  console.log("in card", props)
-
   const { classes } = props;
   const bull = <span className={classes.bullet}>•</span>;
   return (

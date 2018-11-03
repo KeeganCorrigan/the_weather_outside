@@ -27,8 +27,8 @@ function NavBar(props) {
       <AppBar position="static">
         <Toolbar classes={{root: "tool-bar"}}>
           <SimpleMenu />
-          <Typography variant="title" color="inherit" className={classes.flex}>
-            The Weather Outside
+          <Typography variant="subheading" color="inherit" className={classes.flex}>
+            <b>THE WEATHER OUTSIDE</b>
           </Typography>
         </Toolbar>
       </AppBar>

@@ -3,6 +3,7 @@ import './App.css';
 import NavBar from './navbar';
 import Gif from './gif';
 import SimpleCard from './simpleCard';
+import SimpleBottomNavigation from './simpleBottomNavigation'
 import { fetchWeatherData } from './controllers/weatherController'
 
 class App extends Component {
@@ -15,7 +16,6 @@ class App extends Component {
   success(pos) {
     fetchWeatherData(pos.coords.latitude, pos.coords.longitude)
       .then((weatherData) => {
-        console.log(weatherData)
         this.setState({ imageUrl: weatherData.data.image_url, apparentTemperature: weatherData.data.apparent_temperature, summary: weatherData.data.summary});
       });
   };
@@ -44,6 +44,7 @@ class App extends Component {
         < NavBar />
         < Gif imageUrl={this.state.imageUrl} />
         < SimpleCard summary={this.state.summary} temperature={this.state.apparentTemperature} />
+        < SimpleBottomNavigation />
       </div>
     );
   }

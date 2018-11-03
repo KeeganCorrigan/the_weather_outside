@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Image from 'material-ui-image'
 
 class Gif extends Component {
   constructor(props) {
@@ -8,8 +9,9 @@ class Gif extends Component {
   render() {
     return (
       <div>
-        <p> {this.props.latitude} </p>
-        <p> {this.props.longitude} </p>
+        <Image
+        src={this.props.imageUrl}
+        />
       </div>
     );
   }

@@ -17,6 +17,10 @@ code {
   color: white;
 }
 
-.tool-bar {
+.red-toolbar {
   background-color: #f44336;
+}
+
+.blue-toolbar {
+  background-color: blue;
 }

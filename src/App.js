@@ -10,7 +10,7 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.success = this.success.bind(this);
-    this.state = {imageUrl: "", apparentTemperature: "", summary: ""};
+    this.state = {imageUrl: "", apparentTemperature: "", summary: "", value: 0};
   }
 
   success(pos) {
@@ -38,13 +38,30 @@ class App extends Component {
     );
   }
 
+  handleChange = (value) => {
+    console.log("we're changing, here's the", value)
+    this.setState({value: value})
+  }
+
+  renderCardContent = (value) => {
+    if (value == 0) {
+      return (
+        < SimpleCard summary={this.state.summary} temperature={this.state.apparentTemperature} />
+      )
+    } else if (value == 1) {
+      return <h1>DOES THIS WORK?</h1>
+    }
+
+    return <h1> DIFFERENT </h1>
+  }
+
   render() {
     return (
       <div className="App">
-        < NavBar />
+        < NavBar temperature={this.state.apparentTemperature}/>
         < Gif imageUrl={this.state.imageUrl} />
-        < SimpleCard summary={this.state.summary} temperature={this.state.apparentTemperature} />
-        < SimpleBottomNavigation />
+        { this.renderCardContent(this.state.value) }
+        < SimpleBottomNavigation onChange={this.handleChange}/>
       </div>
     );
   }

@@ -21,18 +21,18 @@ class SimpleBottomNavigation extends React.Component {
     value: 0,
   };
 
-  handleChange = (event, value) => {
+  onChange = (event, value) => {
     this.setState({ value });
+    this.props.onChange(value);
   };
 
   render() {
     const { classes } = this.props;
     const { value } = this.state;
-    console.log("in simpleBottomNavigation", value)
     return (
       <BottomNavigation
         value={value}
-        onChange={this.handleChange}
+        onChange={this.onChange}
         showLabels
         className={classes.root}
       >

@@ -25,7 +25,7 @@ function NavBar(props) {
     <div className={classes.root}>
       <AppBar position="static">
         <Toolbar classes={{root: background}}>
-            <i className="fas fa-cloud-sun-rain"></i>  <b>THE WEATHER OUTSIDE</b>
+            <i className="fas fa-cloud-sun-rain"></i><b>THE WEATHER OUTSIDE</b>
         </Toolbar>
       </AppBar>
     </div>

@@ -3,6 +3,7 @@ import './App.css';
 import NavBar from './navbar';
 import Gif from './gif';
 import SimpleCard from './simpleCard';
+import DarkSkyCard from './darkSkyCard';
 import SimpleBottomNavigation from './simpleBottomNavigation'
 import { fetchWeatherData } from './controllers/weatherController'
 
@@ -44,15 +45,16 @@ class App extends Component {
   }
 
   renderCardContent = (value) => {
-    if (value == 0) {
-      return (
-        < SimpleCard summary={this.state.summary} temperature={this.state.apparentTemperature} />
-      )
-    } else if (value == 1) {
+    if (value === 1) {
+      return < DarkSkyCard />
+    } else if (value === 2) {
       return <h1>DOES THIS WORK?</h1>
     }
 
-    return <h1> DIFFERENT </h1>
+    return (
+      < SimpleCard summary={this.state.summary} temperature={this.state.apparentTemperature} />
+    )
+
   }
 
   render() {

@@ -10,6 +10,9 @@ import InfoIcon from '@material-ui/icons/Info';
 const styles = {
   root: {
     width: '100%',
+    position: 'fixed',
+    bottom: 0,
+    borderTop: '2px solid whitesmoke',
   },
 };
 

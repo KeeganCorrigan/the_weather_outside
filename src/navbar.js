@@ -26,7 +26,6 @@ function NavBar(props) {
     <div className={classes.root}>
       <AppBar position="static">
         <Toolbar classes={{root: background}}>
-          <SimpleMenu />
           <Typography variant="subheading" color="inherit" className={classes.flex}>
             <b>THE WEATHER OUTSIDE</b>
           </Typography>

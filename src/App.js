@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
-import './App.css';
-import NavBar from './navbar';
-import Gif from './gif';
-import SimpleCard from './simpleCard';
-import DarkSkyCard from './darkSkyCard';
-import SimpleBottomNavigation from './simpleBottomNavigation'
 import { fetchWeatherData } from './controllers/weatherController'
+import './App.css';
+import AboutCard from './aboutCard';
+import DarkSkyCard from './darkSkyCard';
+import Gif from './gif';
+import NavBar from './navbar';
+import SimpleCard from './simpleCard';
+import SimpleBottomNavigation from './simpleBottomNavigation'
 
 class App extends Component {
   constructor(props) {
@@ -40,7 +41,6 @@ class App extends Component {
   }
 
   handleChange = (value) => {
-    console.log("we're changing, here's the", value)
     this.setState({value: value})
   }
 
@@ -48,7 +48,7 @@ class App extends Component {
     if (value === 1) {
       return < DarkSkyCard />
     } else if (value === 2) {
-      return <h1>DOES THIS WORK?</h1>
+      return <AboutCard />
     }
 
     return (

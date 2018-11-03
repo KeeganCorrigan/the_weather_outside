@@ -259,7 +259,9 @@ ShallowWrapper {
 exports[`Gif renders correctly 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <Gif />,
+  Symbol(enzyme.__unrendered__): <Gif
+    imageUrl="oasdoijasdoij"
+  />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -295,6 +297,7 @@ ShallowWrapper {
             size={48}
           />
         }
+        src="oasdoijasdoij"
       />,
     },
     "ref": null,
@@ -320,7 +323,7 @@ ShallowWrapper {
         "loading": <WithStyles(CircularProgress)
           size={48}
         />,
-        "src": undefined,
+        "src": "oasdoijasdoij",
       },
       "ref": null,
       "rendered": null,
@@ -356,6 +359,7 @@ ShallowWrapper {
               size={48}
             />
           }
+          src="oasdoijasdoij"
         />,
       },
       "ref": null,
@@ -381,7 +385,7 @@ ShallowWrapper {
           "loading": <WithStyles(CircularProgress)
             size={48}
           />,
-          "src": undefined,
+          "src": "oasdoijasdoij",
         },
         "ref": null,
         "rendered": null,
@@ -537,7 +541,10 @@ ShallowWrapper {
 exports[`SimpleCard renders correctly 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <WithStyles(SimpleCard) />,
+  Symbol(enzyme.__unrendered__): <WithStyles(SimpleCard)
+    summary="Clear"
+    temperature="55.6"
+  />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -557,6 +564,8 @@ ShallowWrapper {
         "pos": "SimpleCard-pos-175",
         "title": "SimpleCard-title-174",
       },
+      "summary": "Clear",
+      "temperature": "55.6",
     },
     "ref": null,
     "rendered": null,
@@ -574,6 +583,8 @@ ShallowWrapper {
           "pos": "SimpleCard-pos-175",
           "title": "SimpleCard-title-174",
         },
+        "summary": "Clear",
+        "temperature": "55.6",
       },
       "ref": null,
       "rendered": null,
@@ -689,7 +700,11 @@ exports[`renders correctly 1`] = `
       <h2
         className="MuiTypography-root-178 MuiTypography-h5-194"
       >
-        0
+        <div
+          className="temperature"
+        >
+          0
+        </div>
         <span
           className="SimpleCard-bullet-173"
         >

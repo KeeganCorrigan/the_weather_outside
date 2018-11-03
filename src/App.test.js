@@ -6,6 +6,8 @@ import Enzyme from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 Enzyme.configure({ adapter: new Adapter() });
 import { shallow } from 'enzyme';
+import { mount } from 'enzyme';
+
 import AboutCard from './aboutCard';
 import AboutButton from './aboutButton';
 import App from './App';
@@ -38,7 +40,8 @@ describe('NavBar', () => {
 
 describe('Gif', () => {
   it('renders correctly', () => {
-    const wrapper = shallow(<Gif />);
+    const imageUrl = "oasdoijasdoij"
+    const wrapper = shallow(<Gif imageUrl={imageUrl}/>);
     expect(wrapper).toMatchSnapshot();
   });
 });
@@ -52,7 +55,9 @@ describe('SimpleBottomNavigation', () => {
 
 describe('SimpleCard', () => {
   it('renders correctly', () => {
-    const wrapper = shallow(<SimpleCard />);
+    const temperature = "55.6";
+    const summary = "Clear";
+    const wrapper = shallow(<SimpleCard temperature={temperature} summary={summary} />);
     expect(wrapper).toMatchSnapshot();
   });
 });

@@ -1,0 +1,9 @@
+navigator.geolocation.getCurrentPosition((pos) => { console.log(pos)}, (err) => { console.log(err) }, {  enableHighAccuracy: false,
+  timeout: 2000,
+  maximumAge: 0 })
+undefined
+VM393:1
+Position {coords: Coordinates, timestamp: 1541370483128}
+coords: Coordinates {latitude: 39.708635099999995, longitude: -105.0774745, altitude: null, accuracy: 27, altitudeAccuracy: null, …}
+timestamp: 1541370483128
+__proto__: Position

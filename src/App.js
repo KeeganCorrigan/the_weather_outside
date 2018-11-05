@@ -2,37 +2,46 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import NavBar from './navbar';
-
-var options = {
-  enableHighAccuracy: false,
-  timeout: 2000,
-  maximumAge: 0
-};
-
-const success = (pos) => {
-  this.setState({ latitude: pos.coords.latitude, longitude: pos.coords.longitude });
-}
-
-const error = (err) => {
-  console.log("error", err)
-}
+import Gif from './gif';
+import { fetchWeatherData } from './controllers/weatherController'
 
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = {latitude: "", longitude: ""};
+    this.success = this.success.bind(this);
+    this.state = {imageUrl: ""};
   }
 
+  success(pos) {
+    fetchWeatherData(pos.coords.latitude, pos.coords.longitude)
+      .then((weatherData) => {
+        this.setState({ imageUrl: weatherData.data.image_url});
+      });
+  };
+
+  error(err) {
+    console.log("error", err);
+  };
+
   componentDidMount() {
-    navigator.geolocation.getCurrentPosition(success, error, options);
+    const options = {
+      enableHighAccuracy: false,
+      timeout: 60000,
+      maximumAge: Infinity
+    };
+
+    navigator.geolocation.getCurrentPosition(
+      this.success,
+      this.error,
+      options
+    );
   }
 
   render() {
-    console.log("latitude", this.state.latitude)
-    console.log("latitude", this.state.longitude)
     return (
       <div className="App">
         < NavBar />
+        < Gif imageUrl={this.state.imageUrl} />
       </div>
     );
   }

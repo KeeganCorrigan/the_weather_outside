@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
+import AboutButton from './aboutButton';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
@@ -23,33 +24,30 @@ const styles = {
   },
 };
 
-function SimpleCard(props) {
+function AboutCard(props) {
   const { classes } = props;
   const bull = <span className={classes.bullet}>•</span>;
   return (
     <Card className={classes.card}>
       <CardContent>
         <Typography className={classes.title} color="textSecondary" gutterBottom>
-          Temperature
+          Built to answer a simple question
         </Typography>
-        <Typography variant="h5" component="h2">
-          {Math.floor(props.temperature)}
-          {bull}
-          F
+        <Typography variant="body1">
+          What is the weather like outside today?
         </Typography>
-        <Typography className={classes.pos} color="textSecondary">
-          Summary
+        <Typography className={classes.title} color="textSecondary" gutterBottom>
+          <br/>
+          For more information:
         </Typography>
-        <Typography component="p">
-          <i>{props.summary}</i>
-        </Typography>
+        < AboutButton />
       </CardContent>
     </Card>
   );
 }
 
-SimpleCard.propTypes = {
+AboutCard.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(SimpleCard);
+export default withStyles(styles)(AboutCard);

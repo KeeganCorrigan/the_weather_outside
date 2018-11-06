@@ -9,6 +9,7 @@ import DarkSkyButton from './darkSkyButton';
 const styles = {
   card: {
     minWidth: 275,
+    boxShadow: 'none',
   },
   bullet: {
     display: 'inline-block',

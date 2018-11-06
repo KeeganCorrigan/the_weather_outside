@@ -4,6 +4,7 @@ import { withStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
+import DarkSkyButton from './darkSkyButton';
 
 const styles = {
   card: {
@@ -22,33 +23,26 @@ const styles = {
   },
 };
 
-function SimpleCard(props) {
+function DarkSkyCard(props) {
   const { classes } = props;
   const bull = <span className={classes.bullet}>•</span>;
   return (
     <Card className={classes.card}>
       <CardContent>
         <Typography className={classes.title} color="textSecondary" gutterBottom>
-          Temperature
+          Special thanks to Dark sky
         </Typography>
-        <Typography variant="h5" component="h2">
-          {Math.floor(props.temperature)}
-          {bull}
-          F
+        <Typography variant="body1">
+          The Dark Sky API allows you to request weather forecasts and historical weather data programmatically.
         </Typography>
-        <Typography className={classes.pos} color="textSecondary">
-          Summary
-        </Typography>
-        <Typography component="p">
-          <i>{props.summary}</i>
-        </Typography>
+        < DarkSkyButton />
       </CardContent>
     </Card>
   );
 }
 
-SimpleCard.propTypes = {
+DarkSkyCard.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(SimpleCard);
+export default withStyles(styles)(DarkSkyCard);

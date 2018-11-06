@@ -3,19 +3,20 @@ import './App.css';
 import NavBar from './navbar';
 import Gif from './gif';
 import SimpleCard from './simpleCard';
+import DarkSkyCard from './darkSkyCard';
+import SimpleBottomNavigation from './simpleBottomNavigation'
 import { fetchWeatherData } from './controllers/weatherController'
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.success = this.success.bind(this);
-    this.state = {imageUrl: "", apparentTemperature: "", summary: ""};
+    this.state = {imageUrl: "", apparentTemperature: "", summary: "", value: 0};
   }
 
   success(pos) {
     fetchWeatherData(pos.coords.latitude, pos.coords.longitude)
       .then((weatherData) => {
-        console.log(weatherData)
         this.setState({ imageUrl: weatherData.data.image_url, apparentTemperature: weatherData.data.apparent_temperature, summary: weatherData.data.summary});
       });
   };
@@ -38,12 +39,31 @@ class App extends Component {
     );
   }
 
+  handleChange = (value) => {
+    console.log("we're changing, here's the", value)
+    this.setState({value: value})
+  }
+
+  renderCardContent = (value) => {
+    if (value === 1) {
+      return < DarkSkyCard />
+    } else if (value === 2) {
+      return <h1>DOES THIS WORK?</h1>
+    }
+
+    return (
+      < SimpleCard summary={this.state.summary} temperature={this.state.apparentTemperature} />
+    )
+
+  }
+
   render() {
     return (
       <div className="App">
-        < NavBar />
+        < NavBar temperature={this.state.apparentTemperature}/>
         < Gif imageUrl={this.state.imageUrl} />
-        < SimpleCard summary={this.state.summary} temperature={this.state.apparentTemperature} />
+        { this.renderCardContent(this.state.value) }
+        < SimpleBottomNavigation onChange={this.handleChange}/>
       </div>
     );
   }

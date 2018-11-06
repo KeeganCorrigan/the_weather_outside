@@ -3,9 +3,6 @@ import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
-import SimpleMenu from './simpleMenu';
-import SatelliteIcon from '@material-ui/icons/SatelliteOutlined';
 
 const styles = {
   root: {
@@ -28,7 +25,7 @@ function NavBar(props) {
     <div className={classes.root}>
       <AppBar position="static">
         <Toolbar classes={{root: background}}>
-            {<SatelliteIcon />}<b>THE WEATHER OUTSIDE</b>
+            <i className="fas fa-cloud-sun-rain"></i>  <b>THE WEATHER OUTSIDE</b>
         </Toolbar>
       </AppBar>
     </div>

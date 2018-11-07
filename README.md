@@ -1,5 +1,7 @@
 # THE WEATHER OUTSIDE
 
+[![Build Status](https://travis-ci.com/KeeganCorrigan/the_weather_outside.svg?branch=master)](https://travis-ci.com/KeeganCorrigan/the_weather_outside)
+
 ### About
 
 A mobile only app developed to check what the current weather is like outside. Unlike traditional apps, you get a neat gif of the current condition outside as well as a brief summary. Built to answer the simple question: What's the weather like outside?
@@ -27,8 +29,10 @@ The back end repo is located [here](https://github.com/KeeganCorrigan/the_weathe
 
 You will need to have Node installed, see the link above for more details!
 
-3. Start a server:
+3. To run the test suite:
+    * `$ yarn test`
 
+3. Start a server:
     * `$ yarn start`
 
  Current location is taken from IP address, so if you're prompted to enable location services, the answer is *yes*.

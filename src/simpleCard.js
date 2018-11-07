@@ -33,7 +33,7 @@ function SimpleCard(props) {
           Temperature
         </Typography>
         <Typography variant="h5" component="h2">
-          {Math.floor(props.temperature)}
+          <div className="temperature">{Math.floor(props.temperature)}</div>
           {bull}
           F
         </Typography>

@@ -6,6 +6,8 @@
 
 A mobile only app developed to check what the current weather is like outside. Unlike traditional apps, you get a neat gif of the current condition outside as well as a brief summary. Built to answer the simple question: What's the weather like outside?
 
+Special thanks to the [Dark Sky API](https://darksky.net/dev) for making this possible!
+
 Check it out live:
 
 [https://the-weather-outside.herokuapp.com/](https://the-weather-outside.herokuapp.com/)
